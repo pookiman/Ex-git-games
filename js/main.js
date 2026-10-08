@@ -4,7 +4,11 @@ function onBallClick() {
     if (!ball) return;
 
     const currentSize = parseFloat(getComputedStyle(ball).width) || 100;
-    const newSize = currentSize + 50;
+    let newSize = currentSize + 50;
+
+    if (newSize > 400) {
+        newSize = 100;
+    }
 
     ball.style.width = `${newSize}px`;
     ball.style.height = `${newSize}px`;
