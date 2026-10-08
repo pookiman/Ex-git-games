@@ -4,7 +4,8 @@ function onBallClick() {
     if (!ball) return;
 
     const currentSize = parseFloat(getComputedStyle(ball).width) || 100;
-    let newSize = currentSize + 50;
+    const growBy = getRandomInt(20, 60);
+    let newSize = currentSize + growBy;
 
     if (newSize > 400) {
         newSize = 100;
